@@ -6,6 +6,7 @@ import {
   SelectRole,
   SelectExperience,
   Outcome,
+  Footer,
 } from "../components"
 
 const IndexPage = () => {
@@ -13,6 +14,9 @@ const IndexPage = () => {
   const [selectedRole, setSelectedRole] = useState(null)
   const [selectedExperience, setSelectedExperience] = useState(0)
   const finalQuery = selectedRole + " - " + selectedExperience
+  console.log("company", selectedCompany)
+  console.log("role", selectedRole)
+  console.log("experience", selectedExperience)
   return (
     <Layout>
       <SEO title="Home" />
@@ -20,27 +24,29 @@ const IndexPage = () => {
       <SelectCompany
         setSelectedCompany={setSelectedCompany}
         setSelectedRole={setSelectedRole}
-      />
-      <SelectRole
-        selectedCompany={selectedCompany}
-        setSelectedRole={setSelectedRole}
-      />
-      <SelectExperience
-        selectedExperience={selectedExperience}
         setSelectedExperience={setSelectedExperience}
       />
-      <p>SelectExperience is {finalQuery}</p>
-      <Outcome finalQuery={finalQuery} />
-      <p>
-        Inspired by -{" "}
-        <a
-          href="https://www.linkedin.com/posts/ashneer_bharatpe-bmw-bmwbharatpe-activity-6826414398748278784-Py1l"
-          target="_blank"
-          rel="noreferrer"
-        >
-          This post
-        </a>
-      </p>
+      {selectedCompany && (
+        <SelectRole
+          selectedCompany={selectedCompany}
+          selectedRole={selectedRole}
+          setSelectedExperience={setSelectedExperience}
+          setSelectedRole={setSelectedRole}
+        />
+      )}
+      {selectedCompany && selectedRole && (
+        <SelectExperience
+          selectedExperience={selectedExperience}
+          setSelectedExperience={setSelectedExperience}
+        />
+      )}
+
+      <Outcome
+        finalQuery={finalQuery}
+        selectedExperience={selectedExperience}
+      />
+
+      <Footer />
     </Layout>
   )
 }

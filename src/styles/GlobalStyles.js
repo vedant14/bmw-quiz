@@ -3,8 +3,8 @@ import { createGlobalStyle } from "styled-components"
 export const colors = {
   primaryBlack: "#000000",
   washedBlack: "#4A4A4A",
-  primary: "#FF6F66",
-  white: "#FFFFFF",
+  primary: "#2D9CDB",
+  white: "#FFF2F2",
 }
 
 export const GlobalStyles = createGlobalStyle`
@@ -27,63 +27,57 @@ export const GlobalStyles = createGlobalStyle`
 
 
   h1{
-    font-family: 'Poppins', sans-serif;    
+    font-family: 'Inter', sans-serif;    
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
-    color: ${colors.washedBlack};
+    font-size: 26px;
+    line-height: 28px;
+    color: ${colors.primaryBlack};
     @media screen and (min-width: 768px) {
-      font-size: 48px;
-      line-height: 60px;
+      font-size: 38px;
+      line-height: 46px;
     }
   }
 
   h2{
-    font-family: 'Poppins', sans-serif;    
+    font-family: 'Inter', sans-serif;    
     font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
     @media screen and (min-width: 768px) {
-      font-size: 24px;
+      font-size: 28px;
+      line-height: 34px;
     }
   }
 
   h3{
-    font-family: 'Poppins', sans-serif;    
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    @media screen and (min-width: 768px) {
-      font-size: 20px;
-    }
-  }
-
-  h4{
-    font-family: 'Poppins', sans-serif;    
+    font-family: Inter;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 22px;
+    line-height: 24px;
     @media screen and (min-width: 768px) {
-      font-weight: 500;
-      font-size: 18px;
+      font-size: 28px;
+      line-height: 34px;
     }
   }
 
   p, a, li {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
+    color: ${colors.washedBlack};
     font-style: normal;
     font-weight: 300;
-    color: ${colors.washedBlack};
     font-size: 16px;
-    line-height: 14px;
+    line-height: 16px;
     @media screen and (min-width: 768px) {
       font-size: 18px;
-      line-height: 20px;
+      line-height: 22px;
     }
   }
 
   small{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 200;
     font-size: 14px;
@@ -94,12 +88,35 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   a {
+    font-weight: 500;
     text-decoration: none;
+    color: ${colors.primary};
     &:hover {
       text-decoration: none; 
     }
   }
 
+  button {
+    background: ${colors.white};
+    border: 1px solid ${colors.primary};
+    cursor: pointer;
+    padding: 10px 14px;
+    color: ${colors.primary};
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    border-radius: 10px;
+    margin: 5px 10px 5px 0px;
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 10px 30px 10px 0px;
+    }
+  }
+  .active {
+    background: ${colors.primary};
+    color: ${colors.white};
+  }
 
 
 
@@ -120,64 +137,39 @@ export const GlobalStyles = createGlobalStyle`
       }
     }
 
-  .is-current{
-    > a {
-      color: ${colors.primaryBlack} !important;
-    }
-  }
-  
-  .is-current-mobile{
-    > a {
-      color: ${colors.white} !important;
-      &:after {
-        content: " •"
-      }
-    }
-  }
-
-
-  .buy-button{
-    background: ${colors.primary};
-    box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25);
-    border: 1px solid ${colors.primary};
-    > h4 {
-      color: ${colors.white};
-      padding: 10px 9px;
-      margin: 0px;
-      text-transform: capitalize;
-    }
-    &:hover{
-      background: ${colors.secondary};
-      border: 1px solid ${colors.secondary};
-    }
-    &:focus{
+    .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      margin: 60px auto;
+      height: 10px;
+      background: #E0E0E0;
       outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+      border-radius: 20px;
     }
-  }
 
-  .slick-arrow:before {
-    color: ${colors.primaryBlack};
-  }
-  .slick-prev {
-    position: absolute;
-    top: 100%;
-    display: block;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-    z-index: 100;
-    left: 45%;
-  }
-  .slick-next {
-    position: absolute;
-    top: 100%;
-    display: block;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-    z-index: 100;
-    left: 55%;
-  }
+    .slider:hover {
+      opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      z-index: 10;
+      width: 30px;
+      height: 30px;
+      border-radius: 50px;
+      background: ${colors.primary};
+      cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      background: #04AA6D;
+      cursor: pointer;
+    }
+
 `
