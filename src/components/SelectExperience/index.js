@@ -11,7 +11,7 @@ export function SelectExperience({
 	}
 	return (
 		<div>
-			<h1>Vedant</h1>
+			<h1>Select Experience</h1>
 			<p>{selectedExperience} </p>
 			<input
 				type="range"

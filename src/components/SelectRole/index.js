@@ -11,7 +11,6 @@ export function SelectRole({ selectedCompany, setSelectedRole }) {
 	const featuredRole = roleData?.filter(
 		roleData => roleData.data.RoleCompanySearch === selectedCompany
 	)
-	console.log("Company", selectedCompany)
 	return (
 		<div>
 			<h1>Select from available roles at {selectedCompany}</h1>

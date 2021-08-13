@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import {
   Layout,
   SEO,
-  Hero,
   SelectCompany,
   SelectRole,
   SelectExperience,
@@ -17,6 +16,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
+
       <SelectCompany
         setSelectedCompany={setSelectedCompany}
         setSelectedRole={setSelectedRole}
@@ -31,6 +31,16 @@ const IndexPage = () => {
       />
       <p>SelectExperience is {finalQuery}</p>
       <Outcome finalQuery={finalQuery} />
+      <p>
+        Inspired by -{" "}
+        <a
+          href="https://www.linkedin.com/posts/ashneer_bharatpe-bmw-bmwbharatpe-activity-6826414398748278784-Py1l"
+          target="_blank"
+          rel="noreferrer"
+        >
+          This post
+        </a>
+      </p>
     </Layout>
   )
 }

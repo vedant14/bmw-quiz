@@ -2,8 +2,13 @@ import { useStaticQuery, graphql } from "gatsby"
 
 export const useRoleQuery = () => {
 	const data = useStaticQuery(graphql`
-		query {
-			allAirtable(filter: { table: { eq: "Roles" } }) {
+		{
+			allAirtable(
+				filter: {
+					table: { eq: "Roles" }
+					data: { RolePublish: { eq: "true" } }
+				}
+			) {
 				nodes {
 					data {
 						Role
