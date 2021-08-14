@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { graphql } from "gatsby"
 import {
   Layout,
   SEO,
@@ -8,9 +9,8 @@ import {
   Outcome,
   Footer,
 } from "../components"
-import SocialImage from "../images/social.png"
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   const [selectedCompany, setSelectedCompany] = useState(null)
   const [selectedRole, setSelectedRole] = useState(null)
   const [selectedExperience, setSelectedExperience] = useState(0)
@@ -20,7 +20,7 @@ const IndexPage = () => {
       <SEO
         title="BMW bikes for engineers"
         description="Measure how many BMW bikes can a engineer earn in the unicorns of India."
-        image={SocialImage}
+        image={data.file.childrenImageSharp.resize}
       />
       <SelectCompany
         setSelectedCompany={setSelectedCompany}
@@ -51,4 +51,18 @@ const IndexPage = () => {
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    file(name: { eq: "social" }) {
+      childrenImageSharp {
+        resize(width: 1200) {
+          src
+          height
+          width
+        }
+      }
+    }
+  }
+`
 export default IndexPage

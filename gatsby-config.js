@@ -7,7 +7,7 @@ module.exports = {
     description: `Can you guess the revenue of these popular side projects?`,
     author: `Vedant Lohbare`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
-    keywords: ["Salary for engineers in India", "Veda"],
+    keywords: ["Salary for engineers in India", "Unicorn salaries in India"],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -21,6 +21,8 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -64,12 +66,6 @@ module.exports = {
           },
         ],
       },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-    },
-    {
-      resolve: `gatsby-plugin-styled-components`,
     },
     {
       resolve: `gatsby-plugin-google-gtag`,
