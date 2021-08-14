@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useSalaryQuery } from "../../hooks/useSalaryQuery"
-import BMW from "../../images/bmw.svg"
+import BMW from "../../images/bmw.png"
 
 import { ImageWrapper } from "./styles"
 
@@ -13,7 +13,7 @@ export function Outcome({ selectedExperience, finalQuery }) {
 	const array = []
 	console.log(finalSalaryPrint)
 	if (finalSalaryPrint) {
-		let i = Math.floor(finalSalaryPrint.data.SalaryFigure / 250000)
+		let i = Math.floor(finalSalaryPrint.data.SalaryFigure / 2.5)
 		console.log("i", i)
 		for (; i > 0; i--) {
 			array.push(i)

@@ -8,19 +8,20 @@ import {
   Outcome,
   Footer,
 } from "../components"
+import SocialImage from "../images/social.png"
 
 const IndexPage = () => {
   const [selectedCompany, setSelectedCompany] = useState(null)
   const [selectedRole, setSelectedRole] = useState(null)
   const [selectedExperience, setSelectedExperience] = useState(0)
   const finalQuery = selectedRole + " - " + selectedExperience
-  console.log("company", selectedCompany)
-  console.log("role", selectedRole)
-  console.log("experience", selectedExperience)
   return (
     <Layout>
-      <SEO title="Home" />
-
+      <SEO
+        title="BMW bikes for engineers"
+        description="Measure how many BMW bikes can a engineer earn in the unicorns of India."
+        image={SocialImage}
+      />
       <SelectCompany
         setSelectedCompany={setSelectedCompany}
         setSelectedRole={setSelectedRole}

@@ -7,6 +7,7 @@ module.exports = {
     description: `Can you guess the revenue of these popular side projects?`,
     author: `Vedant Lohbare`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    keywords: ["Salary for engineers in India", "Veda"],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,10 +27,10 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#FFF2F2`,
+        theme_color: `#2D9CDB`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/fav.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,
