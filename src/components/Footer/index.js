@@ -20,7 +20,16 @@ export function Footer() {
 				</small>
 			</div>
 			<div>
-				<small>Created by Vedant</small>
+				<small>
+					Created by{" "}
+					<a
+						href="https://twitter.com/VedantLohbare"
+						target="_blank"
+						rel="noreferrer"
+					>
+						Vedant
+					</a>
+				</small>
 			</div>
 		</FooterWrapper>
 	)
