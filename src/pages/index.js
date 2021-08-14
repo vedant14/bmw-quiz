@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import {
   Layout,
   SEO,
+  Header,
   SelectCompany,
   SelectRole,
   SelectExperience,
@@ -17,10 +18,11 @@ const IndexPage = ({ data }) => {
   const finalQuery = selectedRole + " - " + selectedExperience
   return (
     <Layout>
+      <Header />
       <SEO
         title="BMW bikes for engineers"
         description="Measure how many BMW bikes can a engineer earn in the unicorns of India."
-        image={data.file.childrenImageSharp.resize}
+        image={data.file.childrenImageSharp[0].resize}
       />
       <SelectCompany
         setSelectedCompany={setSelectedCompany}
@@ -41,12 +43,10 @@ const IndexPage = ({ data }) => {
           setSelectedExperience={setSelectedExperience}
         />
       )}
-
       <Outcome
         finalQuery={finalQuery}
         selectedExperience={selectedExperience}
       />
-
       <Footer />
     </Layout>
   )
@@ -55,6 +55,7 @@ const IndexPage = ({ data }) => {
 export const query = graphql`
   {
     file(name: { eq: "social" }) {
+      name
       childrenImageSharp {
         resize(width: 1200) {
           src
