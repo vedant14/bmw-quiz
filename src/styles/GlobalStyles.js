@@ -52,7 +52,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h3{
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 22px;
