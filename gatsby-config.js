@@ -6,7 +6,7 @@ module.exports = {
     title: `Guess the revenue`,
     description: `Can you guess the revenue of these popular side projects?`,
     author: `Vedant Lohbare`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://www.howmanybmws.com/`,
     keywords: ["Salary for engineers in India", "Unicorn salaries in India"],
   },
   plugins: [
