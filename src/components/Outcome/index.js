@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { useSalaryQuery } from "../../hooks/useSalaryQuery"
 import BMW from "../../images/bmw.png"
 
@@ -30,7 +30,7 @@ export function Outcome({ selectedExperience, finalQuery }) {
 						</h1>
 					) : (
 						<div>
-							<h1>You would have been worth {array.length} BMW bikes.</h1>
+							<h1>You can have {array.length} BMW bikes 🏍</h1>
 							<ImageWrapper>
 								{array.map(item => (
 									<img key={item} src={BMW} alt="date" />

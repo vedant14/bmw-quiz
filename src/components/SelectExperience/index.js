@@ -6,9 +6,6 @@ export function SelectExperience({
 	selectedExperience,
 	setSelectedExperience,
 }) {
-	const handleAnswerOptionClick = answer => {
-		setSelectedExperience(answer)
-	}
 	const inputExperienceValue = selectedExperience * 8 + "%"
 	const inputExperienceMinus = 8 - selectedExperience * 3 + "px"
 	return (

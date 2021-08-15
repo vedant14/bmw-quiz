@@ -29,7 +29,7 @@ export const RangeIndicator = styled.p`
 		}
 
 		display: ${props =>
-			props.inputExperience == "0%" ? `none` : "inline-flex"};
+			props.inputExperience === "0%" ? `none` : "inline-flex"};
 	}
 	&#min {
 		left: -10px;

@@ -8,6 +8,7 @@ export const useRoleQuery = () => {
 					table: { eq: "Roles" }
 					data: { RolePublish: { eq: "true" } }
 				}
+				sort: { fields: data___RoleName }
 			) {
 				nodes {
 					data {

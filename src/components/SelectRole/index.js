@@ -21,7 +21,7 @@ export function SelectRole({
 	)
 	return (
 		<div className="Container">
-			<h3>Okay, Now at {selectedCompany}, what could be your role?</h3>
+			<h3>Okay at {selectedCompany} what would be your role?</h3>
 
 			<div>
 				{featuredRole.map(role => (
@@ -30,7 +30,7 @@ export function SelectRole({
 						key={role.data.RoleId}
 						onClick={() => handleAnswerOptionClick(role)}
 					>
-						{role.data.Role}
+						{role.data.RoleName}
 					</button>
 				))}
 			</div>

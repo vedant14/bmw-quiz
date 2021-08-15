@@ -28,6 +28,14 @@ export function Footer() {
 						rel="noreferrer"
 					>
 						Vedant
+					</a>{" "}
+					|{" "}
+					<a
+						href="https://www.buymeacoffee.com/vedantlohbare"
+						target="_blank"
+						rel="noreferrer"
+					>
+						Buy me a book?
 					</a>
 				</small>
 			</div>

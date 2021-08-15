@@ -9,6 +9,7 @@ export function Header() {
 				href="https://twitter.com/intent/tweet?text=Check%20salaries%20at%20Unicorns&url=http://howmanybmws.com/"
 				data-size="large"
 				target="_blank"
+				rel="noreferrer"
 			>
 				<button>Share with your friends</button>
 			</a>

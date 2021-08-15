@@ -20,8 +20,8 @@ export function SelectCompany({
 	return (
 		<Wrapper className="Container">
 			<h1>
-				Ever wondered how many BMW bikes 🏍 you are worth, had you been working
-				in a tech team for one of the unicorns 🦄 in India?
+				Ever wondered how many BMW bikes 🏍 you could have, had you been working
+				in tech for one of the unicorns 🦄 in India?
 			</h1>
 			<h3>See for yourself 👇🏼</h3>
 			<hr />

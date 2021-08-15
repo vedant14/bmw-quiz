@@ -8,6 +8,7 @@ export const useCompanyQuery = () => {
 					table: { eq: "Company" }
 					data: { CompanyPublish: { eq: true } }
 				}
+				sort: { fields: data___CompanyName }
 			) {
 				nodes {
 					data {
