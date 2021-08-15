@@ -55,7 +55,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    file(name: { eq: "social-card" }) {
+    file(name: { eq: "social-card-twitter" }) {
       name
       childrenImageSharp {
         resize(width: 1200) {
