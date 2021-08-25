@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
       <Header />
       <SEO
         title="BMW bikes for engineers"
-        description="Measure how many BMW bikes can a engineer earn in the unicorns of India."
+        description="Find out how many BMW bikes can a engineer earn in the unicorns of India."
         image={data.file.childrenImageSharp[0].resize}
         pathname="home"
       />

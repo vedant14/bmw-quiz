@@ -3,8 +3,8 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: `Guess the revenue`,
-    description: `Can you guess the revenue of these popular side projects?`,
+    title: `How Many BMWs?`,
+    description: `Find out how many BMW bikes can a engineer earn in the unicorns of India`,
     author: `Vedant Lohbare`,
     siteUrl: `https://www.howmanybmws.com/`,
     keywords: ["Salary for engineers in India", "Unicorn salaries in India"],
