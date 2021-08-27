@@ -102,7 +102,7 @@ export const GlobalStyles = createGlobalStyle`
     cursor: pointer;
     padding: 10px 14px;
     color: ${colors.primary};
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 600;
     border-radius: 10px;
