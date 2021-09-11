@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { useCompanyQuery } from "../../hooks/useCompanyQuery"
 import Select from "react-select"
 
