@@ -10,7 +10,9 @@ export function SelectExperience({
 	const inputExperienceMinus = 8 - selectedExperience * 3 + "px"
 	return (
 		<div className="Container">
-			<h3>How many years of experience do you have in this role?</h3>
+			<h3 style={{ marginBottom: "0px" }}>
+				How many years of experience do you have in this role?
+			</h3>
 			<Range>
 				<input
 					type="range"

@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { colors } from "../../styles/GlobalStyles"
 
 export const Range = styled.div`
-	margin: 20px auto 20px 0px;
+	margin: 10px auto 20px 0px;
 	position: relative;
 	width: 100%;
 `

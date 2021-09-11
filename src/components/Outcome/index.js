@@ -29,7 +29,7 @@ export function Outcome({ selectedExperience, finalQuery }) {
 						</h1>
 					) : (
 						<div>
-							<h1>You can have {array.length} BMW bikes</h1>
+							<h1>You can buy {array.length} BMW bikes</h1>
 							<ImageWrapper>
 								{array.map(item => (
 									<img key={item} src={BMW} alt="date" />
