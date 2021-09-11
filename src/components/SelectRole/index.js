@@ -21,7 +21,9 @@ export function SelectRole({
 	)
 	return (
 		<div className="Container">
-			<h3>Okay at {selectedCompany} what would be your role?</h3>
+			<h3>
+				What would be your role at <u>{selectedCompany}</u>?
+			</h3>
 
 			<div>
 				{featuredRole.map(role => (

@@ -7,6 +7,7 @@ import {
   SelectCompany,
   SelectRole,
   SelectExperience,
+  GridWrapper,
   Outcome,
   Footer,
 } from "../components"
@@ -25,29 +26,35 @@ const IndexPage = ({ data }) => {
         image={data.file.childrenImageSharp[0].resize}
         pathname="home"
       />
-      <SelectCompany
-        setSelectedCompany={setSelectedCompany}
-        setSelectedRole={setSelectedRole}
-        setSelectedExperience={setSelectedExperience}
-      />
-      {selectedCompany && (
-        <SelectRole
-          selectedCompany={selectedCompany}
-          selectedRole={selectedRole}
-          setSelectedExperience={setSelectedExperience}
-          setSelectedRole={setSelectedRole}
-        />
-      )}
-      {selectedCompany && selectedRole && (
-        <SelectExperience
-          selectedExperience={selectedExperience}
-          setSelectedExperience={setSelectedExperience}
-        />
-      )}
-      <Outcome
-        finalQuery={finalQuery}
-        selectedExperience={selectedExperience}
-      />
+      <GridWrapper selectedRole={selectedRole}>
+        <div>
+          <SelectCompany
+            setSelectedCompany={setSelectedCompany}
+            setSelectedRole={setSelectedRole}
+            setSelectedExperience={setSelectedExperience}
+          />
+          {selectedCompany && (
+            <SelectRole
+              selectedCompany={selectedCompany}
+              selectedRole={selectedRole}
+              setSelectedExperience={setSelectedExperience}
+              setSelectedRole={setSelectedRole}
+            />
+          )}
+        </div>
+        <div>
+          {selectedCompany && selectedRole && (
+            <SelectExperience
+              selectedExperience={selectedExperience}
+              setSelectedExperience={setSelectedExperience}
+            />
+          )}
+          <Outcome
+            finalQuery={finalQuery}
+            selectedExperience={selectedExperience}
+          />
+        </div>
+      </GridWrapper>
       <Footer />
     </Layout>
   )

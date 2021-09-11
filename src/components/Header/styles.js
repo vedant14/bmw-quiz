@@ -3,7 +3,12 @@ import { colors } from "../../styles/GlobalStyles"
 
 export const Wrapper = styled.div`
 	display: block;
-	margin-top: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	@media screen and (min-width: 768px) {
+		margin-top: 10px;
+		margin-bottom: 30px;
+	}
 	text-align: right;
 	> a > button {
 		border: 1px solid ${colors.primaryBlack};

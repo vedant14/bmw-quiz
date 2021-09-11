@@ -3,25 +3,14 @@ import { useStaticQuery, graphql } from "gatsby"
 export const useCompanyQuery = () => {
 	const data = useStaticQuery(graphql`
 		{
-			allAirtable(
-				filter: {
-					table: { eq: "Company" }
-					data: { CompanyPublish: { eq: true } }
-				}
-				sort: { fields: data___CompanyName }
-			) {
+			allCompanyJson {
 				nodes {
-					data {
-						CompanyName
-						CompanyID
-						CompanyLogo {
-							url
-						}
-					}
+					label
+					value
 				}
 			}
 		}
 	`)
 
-	return data.allAirtable.nodes
+	return data.allCompanyJson.nodes
 }

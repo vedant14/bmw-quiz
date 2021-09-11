@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useCompanyQuery } from "../../hooks/useCompanyQuery"
+import Select from "react-select"
 
 import { Wrapper } from "./styles"
 
@@ -10,32 +11,34 @@ export function SelectCompany({
 }) {
 	const companyData = useCompanyQuery()
 
-	const [active, setActive] = useState(false)
-	const handleAnswerOptionClick = answer => {
-		setSelectedCompany(answer.data.CompanyName)
+	const handleChange = value => {
+		if (value !== null) {
+			setSelectedCompany(value.label)
+		} else {
+			setSelectedCompany(null)
+		}
+		setSelectedExperience(null)
 		setSelectedRole(null)
-		setSelectedExperience(0)
-		setActive(answer.data.CompanyID)
 	}
+
 	return (
 		<Wrapper className="Container">
 			<h1>
-				Ever wondered how many BMW bikes 🏍 you could have, had you been working
-				in tech for one of the unicorns 🦄 in India?
+				How many BMW bikes 🏍 can you earn working in tech for one of the
+				unicorns 🦄 in India?
 			</h1>
-			<h3>See for yourself 👇🏼</h3>
 			<hr />
-			<h3>Select your dream unicorn 🦄</h3>
 			<div>
-				{companyData.map(company => (
-					<button
-						className={active === company.data.CompanyID ? "active" : ""}
-						key={company.data.CompanyID}
-						onClick={() => handleAnswerOptionClick(company)}
-					>
-						{company.data.CompanyName}
-					</button>
-				))}
+				<h3>Select your dream unicorn 🦄</h3>
+				<Select
+					className="select-dropdown"
+					classNamePrefix="select"
+					placeholder="Select"
+					isSearchable={true}
+					isClearable={true}
+					options={companyData}
+					onChange={e => handleChange(e)}
+				/>
 			</div>
 		</Wrapper>
 	)

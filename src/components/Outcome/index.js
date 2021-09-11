@@ -14,7 +14,6 @@ export function Outcome({ selectedExperience, finalQuery }) {
 	console.log(finalSalaryPrint)
 	if (finalSalaryPrint) {
 		let i = Math.floor(finalSalaryPrint.data.SalaryFigure / 2.5)
-		console.log("i", i)
 		for (; i > 0; i--) {
 			array.push(i)
 		}
@@ -30,7 +29,7 @@ export function Outcome({ selectedExperience, finalQuery }) {
 						</h1>
 					) : (
 						<div>
-							<h1>You can have {array.length} BMW bikes 🏍</h1>
+							<h1>You can have {array.length} BMW bikes</h1>
 							<ImageWrapper>
 								{array.map(item => (
 									<img key={item} src={BMW} alt="date" />
