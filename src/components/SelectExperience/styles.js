@@ -2,9 +2,13 @@ import styled from "styled-components"
 import { colors } from "../../styles/GlobalStyles"
 
 export const Range = styled.div`
-	margin: 10px auto 20px 0px;
 	position: relative;
-	width: 100%;
+	width: 80%;
+	margin: auto;
+	@media screen and (min-width: 768px) {
+		margin: 10px auto 20px 0px;
+		width: 100%;
+	}
 `
 
 export const RangeIndicator = styled.p`
