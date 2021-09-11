@@ -15,7 +15,8 @@ export const Wrapper = styled.div`
     @media screen and (min-width: 768px) {
       content: "take a screenshot to share";
       position: absolute;
-      top: -4%;
+      top: 102%;
+      left: 80%;
       display: ${props => (props.value === true ? `block` : `none`)};
     }
   }

@@ -34,8 +34,8 @@ export const GlobalStyles = createGlobalStyle`
     line-height: 28px;
     color: ${colors.primaryBlack};
     @media screen and (min-width: 768px) {
-      font-size: 32px;
-      line-height: 38px;
+      font-size: 28px;
+      line-height: 30px;
     }
   }
 
