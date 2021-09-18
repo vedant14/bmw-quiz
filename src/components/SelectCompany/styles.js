@@ -3,7 +3,7 @@ import { colors } from "../../styles/GlobalStyles"
 
 export const Wrapper = styled.div`
 	@media screen and (min-width: 768px) {
-		margin-top: 30px;
+		margin-top: 00px;
 	}
 	> div {
 		@media screen and (min-width: 1350px) {

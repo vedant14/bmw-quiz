@@ -3,7 +3,7 @@ import { colors } from "../../styles/GlobalStyles"
 
 export const Range = styled.div`
 	position: relative;
-	width: 80%;
+	width: 60%;
 	margin: auto;
 	@media screen and (min-width: 768px) {
 		margin: 10px auto 20px 0px;

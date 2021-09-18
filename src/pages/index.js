@@ -27,6 +27,13 @@ const IndexPage = ({ data }) => {
         pathname="home"
       />
       <GridWrapper selectedRole={selectedRole}>
+        <div className="Container" style={{ marginBottom: "30px" }}>
+          <h1>
+            How many BMW bikes 🏍 can you earn working in tech for one of the
+            unicorns 🦄 in India?
+          </h1>
+          <hr />
+        </div>
         <div>
           <SelectCompany
             setSelectedCompany={setSelectedCompany}

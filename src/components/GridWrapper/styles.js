@@ -9,6 +9,10 @@ export const Wrapper = styled.div`
     border: ${props =>
       props.value === true ? `1px dashed ${colors.primary}` : `none`};
   }
+  grid-template-areas:
+    "header header "
+    "role company";
+
   padding: 20px 10px 40px 10px;
   position: relative;
   &:before {
@@ -19,5 +23,15 @@ export const Wrapper = styled.div`
       left: 80%;
       display: ${props => (props.value === true ? `block` : `none`)};
     }
+  }
+
+  > div:first-child {
+    grid-area: header;
+  }
+  > div:nth-child(2) {
+    grid-area: role;
+  }
+  > div:last-child {
+    grid-area: company;
   }
 `

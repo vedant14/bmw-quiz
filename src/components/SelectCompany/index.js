@@ -23,11 +23,6 @@ export function SelectCompany({
 
 	return (
 		<Wrapper className="Container">
-			<h1>
-				How many BMW bikes 🏍 can you earn working in tech for one of the
-				unicorns 🦄 in India?
-			</h1>
-			<hr />
 			<div>
 				<h3>Select your dream unicorn 🦄</h3>
 				<Select
