@@ -4,14 +4,13 @@ import { colors } from "../../styles/GlobalStyles"
 export const Wrapper = styled.div`
   @media screen and (min-width: 768px) {
     display: grid;
-    grid-template-columns: ${props =>
-      props.value === true ? `1fr 1fr` : `1fr`};
+    grid-template-columns: 1fr 1fr;
     border: ${props =>
       props.value === true ? `1px dashed ${colors.primary}` : `none`};
+    grid-template-areas:
+      "header header "
+      "role company";
   }
-  grid-template-areas:
-    "header header "
-    "role company";
 
   padding: 20px 10px 40px 10px;
   position: relative;
