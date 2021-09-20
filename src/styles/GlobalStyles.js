@@ -171,7 +171,7 @@ export const GlobalStyles = createGlobalStyle`
       margin: 10px 30px 10px 0px;
     }
     > img {
-      width: 200px;
+      width: 210px;
     }
   }
 

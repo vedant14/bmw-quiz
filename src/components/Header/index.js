@@ -7,11 +7,11 @@ export function Header() {
 			<ul>
 				<a
 					className="ph-share-button"
-					href="https://www.producthunt.com/posts/how-many-bmws?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-how-many-bmws"
+					href="https://www.producthunt.com/posts/how-many-bmws?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-how-many-bmws"
 					target="_blank"
 				>
 					<img
-						src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=313125&theme=light"
+						src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=313125&theme=light&period=daily"
 						alt="How many BMWs? - How many BMW bikes can you earn working in tech in India? | Product Hunt"
 					/>
 				</a>
