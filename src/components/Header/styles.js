@@ -10,20 +10,28 @@ export const Wrapper = styled.div`
 		margin-bottom: 30px;
 	}
 	text-align: right;
-	> a > button {
-		border: 1px solid ${colors.primaryBlack};
-		color: ${colors.primaryBlack};
-		font-weight: 300;
-		font-size: 16px;
-		line-height: 16px;
+	> ul {
 		@media screen and (min-width: 768px) {
-			font-size: 18px;
-			line-height: 22px;
+			display: inline-flex;
 		}
-		&:hover {
-			background: ${colors.primary};
-			border: 1px solid ${colors.white};
-			color: ${colors.white};
+		a > button {
+			border: 1px solid ${colors.primaryBlack};
+			color: ${colors.primaryBlack};
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 16px;
+			@media screen and (min-width: 768px) {
+				font-size: 18px;
+				line-height: 22px;
+			}
+			&:hover {
+				background: ${colors.primary};
+				border: 1px solid ${colors.white};
+				color: ${colors.white};
+			}
+		}
+		> a > img {
+			max-width: 100%;
 		}
 	}
 `

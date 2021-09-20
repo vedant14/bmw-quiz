@@ -165,6 +165,17 @@ export const GlobalStyles = createGlobalStyle`
     opacity: 1;
   }
 
+  .ph-share-button {
+    margin: 10px 10px 10px 0px;
+    @media screen and (min-width: 768px) {
+      margin: 10px 30px 10px 0px;
+    }
+    > img {
+      width: 200px;
+    }
+  }
+
+
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
